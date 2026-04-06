@@ -117,14 +117,16 @@ export const prep1T2: Course = {
           title: 'السيرة: رحمة النبي ﷺ في غزوة بدر',
           body:
             'مواقف تُظهر الرحمة رغم ظروف القتال؛ العدل مع الأسرى والتوجيه بالرحمة في القول.',
-          imageSrc: '/images/lesson.svg',
+          imageSrc: '/images/lessons/pr1_w1_l5.png',
+          imageCaption: 'الرحمة خُلُق النبي ﷺ',
         },
         {
           id: 'w1-l6',
           title: 'القيم: الحلم',
           body:
             'الحلم ضبط النفس عند الغضب؛ نمارس استراتيجيات: الإفصاح الهادئ، وطلب الوقت، والاستعاذة من الشيطان.',
-          imageSrc: '/images/lesson.svg',
+          imageSrc: '/images/lessons/pr1_w1_l6.png',
+          imageCaption: 'الحلم ضبط النفس عند الغضب',
         },
       ],
     },
@@ -138,42 +140,48 @@ export const prep1T2: Course = {
           title: 'العقيدة: تكريم الله للإنسان',
           body:
             'الله كرّم بني آدم بالعقل والشرع والاختيار؛ نناقش آثار التكريم في حقوق الذات والآخرين.',
-          imageSrc: '/images/lesson.svg',
+          imageSrc: '/images/lessons/pr1_w2_l1.png',
+          imageCaption: 'الإنسان مُكرَّم بالعقل والشرع',
         },
         {
           id: 'w2-l2',
           title: 'القرآن: سورة التغابن (1–10)',
           body:
             'تلاوة وتفسير مقاطع السورة مع ربطها بمفهوم العدل يوم القيامة.',
-          imageSrc: '/images/lesson.svg',
+          imageSrc: '/images/lessons/pr1_w2_l2.png',
+          imageCaption: 'تلاوة سورة التغابن (١-١٠)',
         },
         {
           id: 'w2-l3',
           title: 'التجويد: مخارج الشفتين والخيشوم',
           body:
             'تمارين على الحروف الشفوية والغنية بضبط المخارج والصفات.',
-          imageSrc: '/images/lesson.svg',
+          imageSrc: '/images/lessons/pr1_w2_l3.png',
+          imageCaption: 'مخارج حروف الشفة والخيشوم',
         },
         {
           id: 'w2-l4',
           title: 'العبادات: من مسائل الصيام',
           body:
             'أركان الصيام، ما يفسد الصيام، وفضائل الصيام في التزكية.',
-          imageSrc: '/images/lesson.svg',
+          imageSrc: '/images/lessons/pr1_w2_l4.png',
+          imageCaption: 'أركان الصيام وما يفسده',
         },
         {
           id: 'w2-l5',
           title: 'السيرة: حرص الرسول على السلام',
           body:
             'آداب التحية والإسلام؛ أثر السلام في نشر المودة.',
-          imageSrc: '/images/lesson.svg',
+          imageSrc: '/images/lessons/pr1_w2_l5.png',
+          imageCaption: 'السلام يُنشر المودة',
         },
         {
           id: 'w2-l6',
           title: 'التاريخ: الخلفاء الراشدون',
           body:
             'أسس اختيار الخلفاء الراشدين والعدل في الشورى باختصار مُنظَّم.',
-          imageSrc: '/images/lesson.svg',
+          imageSrc: '/images/lessons/pr1_w2_l6.png',
+          imageCaption: 'الخلفاء الأربعة الراشدون',
         },
       ],
     },
@@ -187,42 +195,48 @@ export const prep1T2: Course = {
           title: 'العقيدة: الإيمان باليوم الآخر',
           body:
             'مراحل الآخرة بإيجاز: البعث، الحساب، الميزان، الصراط؛ وأثر الإيمان على السلوك.',
-          imageSrc: '/images/lesson.svg',
+          imageSrc: '/images/lessons/pr1_w3_l1.png',
+          imageCaption: 'مراحل يوم القيامة',
         },
         {
           id: 'w3-l2',
           title: 'القرآن: سورة التغابن (11–18)',
           body:
             'تلاوة وتفسير مع الربط بمشاهد يوم القيامة في السورة.',
-          imageSrc: '/images/lesson.svg',
+          imageSrc: '/images/lessons/pr1_w3_l2.png',
+          imageCaption: 'تلاوة سورة التغابن (١١-١٨)',
         },
         {
           id: 'w3-l3',
           title: 'التجويد: الهمس والجهر',
           body:
             'التمييز بين الصفات الصوتية للحروف مع تطبيق على أمثلة.',
-          imageSrc: '/images/lesson.svg',
+          imageSrc: '/images/lessons/pr1_w3_l3.png',
+          imageCaption: 'الهمس والجهر في صفات الحروف',
         },
         {
           id: 'w3-l4',
           title: 'العبادات: من مسائل الحج',
           body:
             'أركان الحج، وأهمية الحج في توحيد العبادة والتآخي.',
-          imageSrc: '/images/lesson.svg',
+          imageSrc: '/images/lessons/pr1_w3_l4.png',
+          imageCaption: 'أركان الحج وأهميته',
         },
         {
           id: 'w3-l5',
           title: 'السيرة: مواقف من سيرة الرسول',
           body:
             'مواقف تُظهر الصبر والعدل؛ استخلاص دروس للحياة المدرسية.',
-          imageSrc: '/images/lesson.svg',
+          imageSrc: '/images/lessons/pr1_w3_l5.png',
+          imageCaption: 'الصبر والعدل في سيرة النبي ﷺ',
         },
         {
           id: 'w3-l6',
           title: 'القيم: مراقبة الله',
           body:
             'الإحسان كأن تراه؛ علاقة المراقبة بالصدق في الخلوة والعلن.',
-          imageSrc: '/images/lesson.svg',
+          imageSrc: '/images/lessons/pr1_w3_l6.png',
+          imageCaption: 'الإحسان كأن تراه',
         },
       ],
     },
