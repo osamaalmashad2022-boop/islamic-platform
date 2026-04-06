@@ -1,0 +1,47 @@
+:root {
+  /* Brand Colors - Premium Islamic Education Palette */
+  --color-primary: #0F5A5C;
+  --color-primary-light: #2A8B8D;
+  --color-primary-mid: #167476;
+  --color-primary-dark: #073839;
+  
+  --color-accent: #E3B23C;
+  --color-accent-light: #F9D87E;
+  --color-accent-soft: rgba(227, 178, 60, 0.18);
+  --color-accent-bright: #FFCC4A;
+
+  /* Neutrals & Background */
+  --color-bg: #F4F8F7;
+  --color-bg-elevated: #FFFFFF;
+  --color-surface: rgba(255, 255, 255, 0.75);
+  
+  --color-text-main: #1C2733;
+  --color-muted: #566C76;
+
+  /* Status Colors */
+  --color-success: #1d6f54;
+  --color-danger: #a32020;
+
+  /* Shadow & Radius */
+  --shadow-soft: 0 12px 40px rgba(15, 90, 92, 0.08);
+  --shadow-card: 0 8px 30px rgba(15, 90, 92, 0.05);
+  --shadow-nav: 0 4px 20px rgba(15, 90, 92, 0.07);
+  --shadow-glow: 0 0 25px rgba(227, 178, 60, 0.4);
+
+  --radius-lg: 24px;
+  --radius-md: 16px;
+
+  /* Typography */
+  --font-display: 'El Messiri', 'Amiri', serif;
+  --font-body: 'Tajawal', system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
