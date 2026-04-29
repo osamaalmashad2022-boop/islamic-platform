@@ -7,18 +7,44 @@ type Props = {
   onComplete: () => void
 }
 
+type SlideItem =
+  | { type: 'goals'; unitTitle: string; unitId: string; content: string[]; title: string }
+  | { type: 'lesson'; unitTitle: string; unitId: string; lesson: import('../types/course').LessonSlide }
+  | { type: 'activities'; unitTitle: string; unitId: string; content: string[]; title: string }
+
 export function LessonContent({ units, onComplete }: Props) {
-  const flat = useMemo(
-    () =>
-      units.flatMap((u) =>
-        u.lessons.map((lesson) => ({
+  const flat = useMemo(() => {
+    return units.flatMap((u) => {
+      const items: SlideItem[] = []
+      if (u.goals && u.goals.length > 0) {
+        items.push({
+          type: 'goals',
+          unitTitle: u.title,
+          unitId: u.id,
+          content: u.goals,
+          title: 'أهداف الوحدة',
+        })
+      }
+      u.lessons.forEach((lesson) => {
+        items.push({
+          type: 'lesson',
           unitTitle: u.title,
           unitId: u.id,
           lesson,
-        })),
-      ),
-    [units],
-  )
+        })
+      })
+      if (u.activities && u.activities.length > 0) {
+        items.push({
+          type: 'activities',
+          unitTitle: u.title,
+          unitId: u.id,
+          content: u.activities,
+          title: 'أنشطة الوحدة',
+        })
+      }
+      return items
+    })
+  }, [units])
 
   const [index, setIndex] = useState(0)
   const current = flat[index]
@@ -35,7 +61,7 @@ export function LessonContent({ units, onComplete }: Props) {
     )
   }
 
-  const { lesson, unitTitle } = current
+  const { unitTitle } = current
 
   return (
     <section className="lessons" aria-labelledby="lesson-title">
@@ -43,31 +69,61 @@ export function LessonContent({ units, onComplete }: Props) {
         <div className="lessons__progress-bar" style={{ width: `${progress}%` }} />
       </div>
       <p className="lessons__meta">
-        الدرس {index + 1} من {flat.length} — {unitTitle}
+        القسم {index + 1} من {flat.length} — {unitTitle}
       </p>
 
-      <div key={lesson.id} className="lesson-card-wrap">
+      <div key={`${current.unitId}-${index}`} className="lesson-card-wrap">
         <article className="lesson-card">
-          <h2 id="lesson-title" className="lesson-card__title">
-            {lesson.title}
-          </h2>
-          <div className="lesson-card__goal">
-            <span className="lesson-card__goal-label">تذكير</span>
-            اقرأ بتمعن، ثم انتقل للدرس التالي عند استيعاب الفكرة الرئيسية.
-          </div>
-          <div className="lesson-card__body">
-            <p>{lesson.body}</p>
-          </div>
-          {lesson.imageSrc && (
-            <figure className="lesson-card__figure">
-              <img
-                src={lesson.imageSrc}
-                alt={lesson.imageCaption ?? 'توضيح بصري للدرس'}
-                className="lesson-card__img"
-                loading="lazy"
-              />
-              {lesson.imageCaption && <figcaption>{lesson.imageCaption}</figcaption>}
-            </figure>
+          {current.type === 'goals' && (
+            <>
+              <h2 className="lesson-card__title">{current.title}</h2>
+              <div className="lesson-card__body">
+                <ul className="lesson-card__list">
+                  {current.content.map((goal, i) => (
+                    <li key={i}>{goal}</li>
+                  ))}
+                </ul>
+              </div>
+            </>
+          )}
+
+          {current.type === 'lesson' && (
+            <>
+              <h2 id="lesson-title" className="lesson-card__title">
+                {current.lesson.title}
+              </h2>
+              <div className="lesson-card__goal">
+                <span className="lesson-card__goal-label">تذكير</span>
+                اقرأ بتمعن، ثم انتقل للدرس التالي عند استيعاب الفكرة الرئيسية.
+              </div>
+              <div className="lesson-card__body">
+                <p>{current.lesson.body}</p>
+              </div>
+              {current.lesson.imageSrc && (
+                <figure className="lesson-card__figure">
+                  <img
+                    src={current.lesson.imageSrc}
+                    alt={current.lesson.imageCaption ?? 'توضيح بصري للدرس'}
+                    className="lesson-card__img"
+                    loading="lazy"
+                  />
+                  {current.lesson.imageCaption && <figcaption>{current.lesson.imageCaption}</figcaption>}
+                </figure>
+              )}
+            </>
+          )}
+
+          {current.type === 'activities' && (
+            <>
+              <h2 className="lesson-card__title">{current.title}</h2>
+              <div className="lesson-card__body">
+                <ul className="lesson-card__list">
+                  {current.content.map((act, i) => (
+                    <li key={i}>{act}</li>
+                  ))}
+                </ul>
+              </div>
+            </>
           )}
         </article>
       </div>

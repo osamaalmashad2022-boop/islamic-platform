@@ -20,6 +20,8 @@ export type Unit = {
   id: string
   title: string
   summary?: string
+  goals?: string[]
+  activities?: string[]
   lessons: LessonSlide[]
 }
 

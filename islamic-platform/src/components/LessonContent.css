@@ -93,6 +93,17 @@
   line-height: 1.85;
 }
 
+.lesson-card__list {
+  margin: 0;
+  padding-inline-start: 1.5rem;
+  font-size: 1.03rem;
+  line-height: 1.85;
+}
+
+.lesson-card__list li {
+  margin-bottom: 0.5rem;
+}
+
 .lesson-card__figure {
   margin: 1.35rem 0 0;
   text-align: center;

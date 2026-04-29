@@ -13,11 +13,8 @@ export function Home() {
             <span className="hero__brand-en" lang="en" dir="ltr" style={{ fontFamily: 'var(--font-display)' }}>
               WaSSel
             </span>
-            <span className="hero__title-ar">تعلّم تفاعلي وإبداعي</span>
+            <span className="hero__title-ar">مرحبا بكم في مقرر التربية الدينية</span>
           </h1>
-          <p className="hero__lead">
-            تعلّم تفاعلي بثلاث مراحل: اختبار قبلي، دروس معززة بصور، ثم اختبار بعدي لقياس التقدم.
-          </p>
           <div className="hero__actions">
             <a href="#courses" className="btn btn--primary hero__cta">
               استكشف الكورسات
